@@ -1,0 +1,91 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "import/default": 0,
+    "import/no-duplicates": 2,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+
+    "comma-dangle": 0,
+    "global-require": 0,
+    "object-curly-spacing": 0,
+    "one-var": 0,
+    "no-underscore-dangle": 0,
+    "no-restricted-syntax": 0,
+    "camelcase": 0,
+    "no-use-before-define": 0,
+    "new-cap": 0,
+    "no-proto": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "max-len": 0,
+    "quote-props": 0,
+    "no-var": 1,
+    "prefer-arrow-callback": 1,
+    "eol-last": 1,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": [1, {allow: ["warn", "error"]}],
+    "no-alert": 1,
+    "no-debugger": 1,
+    "semi": [1, "always"],
+    "jsx-quotes": [2, "prefer-single"],
+    "no-extra-semi": 1,
+    "space-before-function-paren": 1,
+    "no-unused-vars": 1,
+    "one-var-declaration-per-line": 1,
+    "prefer-rest-params": 1,
+    "spaced-comment": 1,
+    "space-in-parens": 1,
+    "arrow-body-style": 1,
+    "space-infix-ops": 0,
+
+    "react/no-multi-comp": 2,
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-closing-bracket-location": [2, {selfClosing: "after-props", nonEmpty: "tag-aligned"}],
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-max-props-per-line": [2, {maximum: 3}],
+    "react/jsx-no-literals": 0,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": 2,
+    "react/prop-types": 2,
+    "react/prefer-stateless-function": 1,
+
+    "flowtype/require-parameter-type": 2,
+    "flowtype/space-after-type-colon": [1, "always"],
+    "flowtype/space-before-type-colon": [1, "never"],
+    "flowtype/type-id-match": [1, "^([A-Z][a-z0-9]+)+Type$"]
+  },
+  "plugins": [
+    "react",
+    "import",
+    "flowtype"
+  ],
+  "settings": {
+    "import/resolve": {
+      "moduleDirectory": ["node_modules"]
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  },
+  "globals": {
+    "glomex": true,
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__DEVTOOLS__": true,
+    "socket": true,
+    "webpackIsomorphicTools": true
+  }
+}

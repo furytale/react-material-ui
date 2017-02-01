@@ -1,0 +1,22 @@
+$cool-grey       ?= #8c96a0
+
+.Chip
+  height: 28px
+  padding-right: 10px
+  background-color: transparent
+  border-radius: 25px;
+  margin: 2px 0 0 2px
+  borderRadius: 16px
+  display: inline-flex
+  alignItems: center
+  cursor: default
+  zIndex: 999
+  transition: border-color .3s ease,background-color .3s ease;
+  &:hover, focus
+    background-color: $cool-grey
+
+  &_Text
+    align-self: center
+
+  &_Hidden
+    visibility: hidden
